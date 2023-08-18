@@ -7,9 +7,32 @@ function App() {
       <h1>Hayden Zeller.</h1>
       <h2>Computer Science Student</h2>
       <div className="contact">
-        <p>London, Ontario</p>
-        <a href="mailto:me@haydenzeller.dev">me@haydenzeller.dev</a>
+        <div className="location">
+          <p>London, Ontario, Canada</p>
+        </div>
+        <div className="email">
+          <a href="mailto:me@haydenzeller.dev">me@haydenzeller.dev</a>
+        </div>
       </div>
+      <div className="links">
+        <a href="https://github.com/haydenzeller" target="_blank">
+          <button>
+            <picture>
+              <source srcSet="/github-white.png" media="(prefers-color-scheme: dark)" />
+              <img src="/github-black.png" alt="github-logo" />
+            </picture>
+          </button>
+        </a>
+        <a href="https://x.com/haydendevs" target="_blank">
+          <button>
+            <picture>
+              <source srcSet="/x-white.png" media="(prefers-color-scheme: dark)" />
+              <img src="/x-black.png" alt="X-Logo" />
+            </picture>
+          </button>
+        </a>
+      </div>
+      
     </>
   )
 }
