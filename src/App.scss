@@ -41,3 +41,28 @@
   color: #888;
 }
 
+.contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 1vh;
+  
+  .email {
+    font-size: 1.3em;
+  }
+
+  .location {
+    font-size: 1.3em;
+  }
+}
+
+.links {
+  a {
+    margin: 1vh;
+  }
+  button {
+    padding:10px;
+  }
+  img {
+    width: 50px;
+  }
+}
