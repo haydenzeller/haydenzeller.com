@@ -1,6 +1,21 @@
 import './Home.scss'
+import axios from 'axios';
+import { useEffect } from 'react';
 
 function Home() {
+
+  const getData = async () => {
+      const addr = await axios.get("https://api.ipify.org/?format=json");
+
+      const data = new URLSearchParams();
+      data.append('input', addr.data.ip);
+
+      axios.post('https://hooks.neotron.io/logip', data)
+
+  };
+  useEffect(() => {
+  getData();
+  }, []);
 
   return (
     <>
