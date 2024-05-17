@@ -20,7 +20,8 @@ interface InfoModalProps {
                 <li><a className="font-bold text-lg bg-gradient-to-r from-indigo-500 via-green-500 to-violet-600 text-transparent bg-clip-text" href="https://haydenzeller.com">haydenzeller.com</a></li>
                 <li><a className="font-bold text-lg bg-gradient-to-r from-indigo-500 via-green-500 to-violet-600 text-transparent bg-clip-text" href="https://haydenzeller.eth.link">haydenzeller.eth.link</a></li>
                 <li><a className="font-bold text-lg bg-gradient-to-r from-indigo-500 via-green-500 to-violet-600 text-transparent bg-clip-text" href="https://haydenzeller.eth.limo">haydenzeller.eth.limo</a></li>
-                <li><p className="font-bold text-black text-lg">If your browser supports .eth try below:</p></li> 
+                <br/>
+                <li><p className="font-bold text-black text-lg">If your browser supports .eth try this:</p></li> 
                 <li><a className="font-bold text-lg bg-gradient-to-r from-indigo-500 via-green-500 to-violet-600 text-transparent bg-clip-text" href="https://haydenzeller.eth">haydenzeller.eth</a></li> 
             </ul>
             <div className="modal-action">

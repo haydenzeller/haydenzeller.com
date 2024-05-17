@@ -19,12 +19,12 @@ export default function Home() {
   
   return (
     <main className="flex min-h-screen max-w-screen flex-col items-center bg-gradient-to-r from-indigo-400 to-orange-400">
-      <div className="rounded-lg p-5 mt-5 backdrop-contrast-200 backdrop-blur-3xl border-4">
+      <div className="rounded-lg p-5 mt-5 mr-2 ml-2 backdrop-contrast-200 bg-white bg-opacity-50 border-4">
         <h1 className="text-3xl font-bold ">Hi👋</h1>
         <p className="text-2xl font-bold">I&apos;m Hayden Zeller,</p>
         <p className="text-2xl font-bold">Computer Science Student and <span className="bg-gradient-to-r from-indigo-500 via-green-500 to-violet-600 text-transparent bg-clip-text">Web 3.0</span> advocate.</p>
       </div>
-      <div className="rounded-lg p-5 mt-5 backdrop-contrast-200 backdrop-blur-3xl border-4">
+      <div className="rounded-lg p-5 mt-5 backdrop-contrast-200 bg-white bg-opacity-50 border-4">
         <div>
           <h1 className="text-3xl font-bold underline text-center">Find me here</h1>
           <div id="github" className="flex flex-row items-center p-2">
@@ -49,8 +49,8 @@ export default function Home() {
       </div>
       <InfoModal isOpen={isModalOpen} onClose={closeModal}></InfoModal>
       <div className="mt-4">
-        <button className="btn border-4 border-white bg-transparent backdrop-contrast-200" onClick={openModal}>
-          <p className="text-white font-bold text-lg">Site Info</p>
+        <button className="btn hover:border-white hover:bg-white border-4 border-white backdrop-contrast-200 bg-white bg-opacity-50" onClick={openModal}>
+          <p className="text-black font-bold text-lg">Site Info</p>
         </button>
       </div>
     </main>
