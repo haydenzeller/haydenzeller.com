@@ -9,7 +9,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center pt-2 pl-5 pr-5 bg-gradient-to-r from-indigo-400 to-orange-400">
       <div className="rounded-lg p-5 mt-5 backdrop-contrast-200 backdrop-blur-3xl border-4">
         <h1 className="text-3xl font-bold ">Hi👋</h1>
-        <p className="text-2xl font-bold">I'm Hayden Zeller,</p>
+        <p className="text-2xl font-bold">I&apos;m Hayden Zeller,</p>
         <p className="text-2xl font-bold">Computer Science Student and <span className="bg-gradient-to-r from-indigo-500 via-green-500 to-violet-600 text-transparent bg-clip-text">Web 3.0</span> advocate.</p>
       </div>
       <div className="rounded-lg p-5 mt-5 backdrop-contrast-200 backdrop-blur-3xl border-4">
