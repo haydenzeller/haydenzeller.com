@@ -6,7 +6,7 @@ import x from "../public/x-logo.png"
 import ens from "../public/ens_mark_light.png"
 import Image from "next/image";
 import InfoModal from "./components/infoModal";
-
+import CryptoPrices from "./components/cryptoPrices"
 export default function Home() {
   //Modal 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,10 +19,16 @@ export default function Home() {
   //End Modal
   return (
     <>
-      <main className="flex min-h-screen max-w-screen flex-col items-center bg-gradient-to-r from-indigo-400 to-orange-400">
+      <div className="bg-gradient-to-r from-indigo-400 to-orange-400">
+        <InfoModal isOpen={isModalOpen} onClose={closeModal}></InfoModal>
+        <button className="m-2 btn hover:border-white hover:bg-white border-4 border-white backdrop-contrast-200 bg-white bg-opacity-50" onClick={openModal}>
+          <p className="text-black font-bold text-lg">Site Info</p>
+        </button>
+      </div>
+      <main className="flex min-h-screen max-w-screen flex-col items-center md:flex bg-gradient-to-r from-indigo-400 to-orange-400">
         <div className="rounded-lg p-5 mt-5 mr-2 ml-2 backdrop-contrast-200 bg-white bg-opacity-50 border-4">
           <h1 className="text-3xl font-bold ">Hi👋</h1>
-          <p className="text-2xl font-bold">I&apos;m Hayden Zeller,</p>
+          <p className="text-2xl font-bold ">I&apos;m <span className="bg-gradient-to-r from-indigo-500 via-green-500 to-violet-600 text-transparent bg-clip-text">Hayden Zeller</span>,</p>
           <p className="text-2xl font-bold">Computer Science Student and <span className="bg-gradient-to-r from-indigo-500 via-green-500 to-violet-600 text-transparent bg-clip-text">Web 3.0</span> advocate.</p>
         </div>
         <div className="rounded-lg p-5 mt-5 backdrop-contrast-200 bg-white bg-opacity-50 border-4">
@@ -48,12 +54,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <InfoModal isOpen={isModalOpen} onClose={closeModal}></InfoModal>
-        <div className="mt-4">
-          <button className="btn hover:border-white hover:bg-white border-4 border-white backdrop-contrast-200 bg-white bg-opacity-50" onClick={openModal}>
-            <p className="text-black font-bold text-lg">Site Info</p>
-          </button>
-        </div>
+        <CryptoPrices/>
       </main>
   </>
   );
