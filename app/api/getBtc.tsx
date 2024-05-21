@@ -1,4 +1,3 @@
-'use server'
 export default async function getBtc() {
   const url = "https://api.coincap.io/v2/assets/bitcoin"
   const options = {

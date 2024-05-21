@@ -1,4 +1,3 @@
-'use server'
 import Freecurrencyapi from '@everapi/freecurrencyapi-js';
 export default async function getExRate() {
     const currencyconvert = new Freecurrencyapi('fca_live_JmnimPaHhYNajShOoYktZUGwXfySCaVmJ4wqRKmf');
