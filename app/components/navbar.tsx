@@ -7,11 +7,12 @@ import redTriangle from "../../public/triangleRed.png"
 import greenTriangle from "../../public/triangleGreen.png"
 import Image from "next/image";
 export default function NavBar() {
-  //Price Formatter
+    //Price Formatter
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD'
     })
+    //End Price Formatter
 
     //BTC Price
     const [btcPrice, setBTCPrice] = useState("");
@@ -25,7 +26,7 @@ export default function NavBar() {
         setBTCPrice(format);
         }
         fetchData();
-    }, []);
+    }, [formatter]);
     //End BTC Price
     return  (
     <header className="p-4 bg-gradient-to-r from-indigo-400 to-orange-400">
