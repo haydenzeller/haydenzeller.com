@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import getWalletBalance from "../api/getWalletBalance";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
-export default function walletScan() {
+export default function WalletScan() {
     const [walletAddr, setWalletAddr] = useState("");
     const [walletBalance, setWalletBalance] = useState(0);
     const [showDetail, setShowDetail] = useState(false);
