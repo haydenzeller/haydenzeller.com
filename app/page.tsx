@@ -7,6 +7,8 @@ import ens from "../public/ens_mark_light.png"
 import Image from "next/image";
 import InfoModal from "./components/infoModal";
 import CryptoPrices from "./components/cryptoPrices"
+import WalletScan from "./components/WalletScan";
+
 export default function Home() {
   //Modal 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,12 +28,12 @@ export default function Home() {
         </button>
       </div>
       <main className="flex min-h-screen max-w-screen flex-col items-center md:flex bg-gradient-to-r from-indigo-400 to-orange-400">
-        <div className="rounded-lg p-5 mt-5 mr-2 ml-2 backdrop-contrast-200 bg-white bg-opacity-50 border-4">
+        <div className="rounded-lg p-5 mt-5 mr-2 ml-2 backdrop-contrast-200 bg-white bg-opacity-50 border-4 border-white">
           <h1 className="text-3xl font-bold ">Hi👋</h1>
           <p className="text-2xl font-bold ">I&apos;m <span className="bg-gradient-to-r from-indigo-500 via-green-500 to-violet-600 text-transparent bg-clip-text">Hayden Zeller</span>,</p>
           <p className="text-2xl font-bold">Computer Science Student and <span className="bg-gradient-to-r from-indigo-500 via-green-500 to-violet-600 text-transparent bg-clip-text">Web 3.0</span> advocate.</p>
         </div>
-        <div className="rounded-lg p-5 mt-5 backdrop-contrast-200 bg-white bg-opacity-50 border-4">
+        <div className="rounded-lg p-5 mt-5 backdrop-contrast-200 border-white bg-white bg-opacity-50 border-4">
           <div>
             <h1 className="text-3xl font-bold underline text-center">Find me here</h1>
             <div id="github" className="flex flex-row items-center p-2">
@@ -54,7 +56,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <CryptoPrices/>
+        <div className="flex flex-col pt-4">
+          <h1 className="font-bold text-2xl text-center">API Tests:</h1>
+          <CryptoPrices/>
+          <WalletScan />
+        </div>
       </main>
   </>
   );

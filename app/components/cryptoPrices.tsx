@@ -25,13 +25,13 @@ export default function CryptoPrices() {
             minimumIntegerDigits: 1
         })
         async function fetchData() {
-        const price = await getBtc();
-        const rate = await getExRate();
-        const priceFormat = dollarFormatter.format(price.priceUsd*rate);
-        const percentFormat = percentFormatter.format(price.changePercent24Hr/100);
-        setBTCPercentChange(percentFormat);
-        setBTCPrice(priceFormat);
-        setbtcIsGreen(price.changePercent24Hr > 0 ? 1 : 0);
+            const price = await getBtc();
+            const rate = await getExRate();
+            const priceFormat = dollarFormatter.format(price.priceUsd*rate);
+            const percentFormat = percentFormatter.format(price.changePercent24Hr/100);
+            setBTCPercentChange(percentFormat);
+            setBTCPrice(priceFormat);
+            setbtcIsGreen(price.changePercent24Hr > 0 ? 1 : 0);
         }
         fetchData();
     }, []);
@@ -51,13 +51,13 @@ export default function CryptoPrices() {
             minimumIntegerDigits: 1
         })
         async function fetchData() {
-        const price = await getEth();
-        const rate = await getExRate();
-        const priceFormat = dollarFormatter.format(price.priceUsd*rate);
-        const percentFormat = percentFormatter.format(price.changePercent24Hr/100);
-        setETHPercentChange(percentFormat);
-        setETHPrice(priceFormat);
-        setEthIsGreen(price.changePercent24Hr > 0 ? 1 : 0);
+            const price = await getEth();
+            const rate = await getExRate();
+            const priceFormat = dollarFormatter.format(price.priceUsd*rate);
+            const percentFormat = percentFormatter.format(price.changePercent24Hr/100);
+            setETHPercentChange(percentFormat);
+            setETHPrice(priceFormat);
+            setEthIsGreen(price.changePercent24Hr > 0 ? 1 : 0);
         }
         fetchData();
     }, []);
